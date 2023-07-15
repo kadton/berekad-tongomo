@@ -8,7 +8,6 @@ const styles = {
     display: "flex",
     flexDirection: "row",
     justifyContent: "center",
-    height: "480px",
     width: "100%",
     color: "text.primary",
     padding: "28px",
