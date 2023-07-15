@@ -2,6 +2,7 @@ import React from "react";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import HeroSection from "../components/HeroSection";
+import Experience from "../components/Experience";
 
 // import { ThemeOptions } from '@mui/material/styles';
 
@@ -61,6 +62,7 @@ const index = () => {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <HeroSection />
+      <Experience />
     </ThemeProvider>
   );
 };

@@ -16,7 +16,7 @@ export const config = {
   },
   experiences: [
     {
-      title: "Software Engineer",
+      role: "Software Engineer",
       company: "MVF Global",
       link: "https://mvfglobal.com/",
       start: "2022",
@@ -24,9 +24,10 @@ export const config = {
       summary:
         "Streamlined data lookup by linking prospects to parent company groups using React, PHP, and GraphQL, significantly boosting the data team's efficiency in tracking client performance. ",
       skills: ["ReactJS", "JavaScript", "TypeScript", "PHP", "GraphQL"],
+      projects: [],
     },
     {
-      title: "Technical Customer Success Executive",
+      role: "Technical Customer Success Executive",
       company: "MVF Global",
       link: "https://mvfglobal.com/",
       start: "2020",
@@ -41,6 +42,13 @@ export const config = {
         "Postman",
         "Zapier",
         "API Integrations",
+      ],
+      projects: [
+        {
+          name: "Widget Finder",
+          icon: "",
+          link: "https://chrome.google.com/webstore/detail/widget-finder/aehpmlfdbpnbjnbkekfbffbnpepnglmh",
+        },
       ],
     },
   ],
