@@ -3,6 +3,7 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import HeroSection from "../components/HeroSection";
 import Experience from "../components/Experience";
+import { Footer } from "../components/Footer";
 
 // import { ThemeOptions } from '@mui/material/styles';
 
@@ -63,6 +64,7 @@ const index = () => {
       <CssBaseline />
       <HeroSection />
       <Experience />
+      <Footer />
     </ThemeProvider>
   );
 };
