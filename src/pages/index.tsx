@@ -1,59 +1,51 @@
 import React from "react";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
-import HeroSection from "../components/HeroSection";
-import Experience from "../components/Experience";
-import { Footer } from "../components/Footer";
-
-// import { ThemeOptions } from '@mui/material/styles';
-
-// export const themeOptions: ThemeOptions = {
-//   palette: {
-//     mode: 'light',
-//     primary: {
-//       main: '#281b35',
-//       light: '#53485d',
-//     },
-//     secondary: {
-//       main: 'rgba(45,212,191,0.12)',
-//       contrastText: '#5eead4',
-//     },
-//     background: {
-//       default: '#281b35',
-//       paper: '#281b35',
-//     },
-//     text: {
-//       primary: '#ffffff',
-//       secondary: '#94a3b8',
-//       disabled: '#94a3b8',
-//     },
-//   },
-// };
+import "../fonts.css";
+import App from "../components/App";
 
 export const theme = createTheme({
+  typography: {
+    fontFamily: '"Montserrat", sans-serif',
+    button: {
+      textTransform: "none",
+    },
+    h1: {
+      fontSize: "2rem",
+    },
+    h2: {
+      fontSize: "1.5rem",
+    },
+    h3: {
+      fontSize: "1.2rem",
+      lineHeight: "1.5",
+    },
+    h4: {
+      fontSize: "1rem",
+    },
+    subtitle1: {
+      fontSize: "0.8rem",
+    },
+  },
   palette: {
-    mode: "light",
     primary: {
-      main: "#281b35",
-      light: "#53485d",
+      main: "#92e5a1",
     },
     secondary: {
-      main: "rgba(45,212,191,0.12)",
-      contrastText: "#5eead4",
+      main: "#ffffff",
     },
     background: {
-      default: "#281b35",
-      paper: "#281b35",
+      default: "#020204",
+      paper: "#0202045",
     },
     text: {
-      primary: "#ffffff",
-      secondary: "#94a3b8",
+      primary: "#92e5a1",
+      secondary: "rgba(255, 255, 255, 0.7)",
       disabled: "#94a3b8",
     },
     info: {
       main: "#ffffff",
-      light: "#ffffff",
-      dark: "#b2b2b2",
+      light: "rgb(0 32 0)",
     },
   },
 });
@@ -62,9 +54,7 @@ const index = () => {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <HeroSection />
-      <Experience />
-      <Footer />
+      <App />
     </ThemeProvider>
   );
 };

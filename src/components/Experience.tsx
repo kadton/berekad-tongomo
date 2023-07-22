@@ -6,7 +6,7 @@ import {
   Typography,
   Card,
   CardContent,
-  IconButton,
+  Button,
   Chip,
   styled,
   Hidden,
@@ -16,7 +16,6 @@ import { config } from "../config";
 
 interface IProjects {
   name: string;
-  icon: string;
   link: string;
 }
 
@@ -31,19 +30,19 @@ interface IWorkExperience {
   projects: IProjects[];
 }
 
-function LinkTextIcon({ name, icon, link }: IProjects) {
+function LinkTextIcon({ name, link }: IProjects) {
   return (
-    <IconButton
+    <Button
       color="info"
       aria-aria-label="open link"
       href={link}
       target="_blank"
+      startIcon={<LaunchIcon />}
     >
-      <LaunchIcon />
       <Typography ml={1} variant="body2">
         {name}
       </Typography>
-    </IconButton>
+    </Button>
   );
 }
 
@@ -58,7 +57,7 @@ function WorkExperience({
   link,
 }: IWorkExperience) {
   return (
-    <Grid item>
+    <Grid item style={{ paddingLeft: 0 }}>
       <a
         style={{ textDecoration: "none" }}
         href={link}
@@ -67,28 +66,33 @@ function WorkExperience({
       >
         <StyledCard variant="outlined">
           <Hidden smDown>
-            <Box flex={1} flexBasis="30%">
+            <Box flex={1} flexBasis="25%">
               <Typography variant="subtitle1">
                 {start} - {end}
               </Typography>
             </Box>
           </Hidden>
-          <Box flex={1} flexBasis="70%">
+          <Box flex={1} flexBasis="85%">
             <CardContent className="card-content">
               <Hidden smUp>
                 <Typography variant="subtitle1" className="mb">
                   {start} - {end}
                 </Typography>
               </Hidden>
-              <Typography variant="h6" className="mb company-role">
+              <Typography variant="h4" className="mb company-role">
                 {role} {"\u25CF"} {company}
               </Typography>
-              <Typography variant="body2" className="mb">
+              <Typography variant="body2" className="mb summary">
                 {summary}
               </Typography>
               <Hidden smUp>
                 {skills.map((skill) => (
-                  <Chip label={skill} color="secondary" className="skills mt" />
+                  <Chip
+                    label={skill}
+                    color="primary"
+                    variant="outlined"
+                    className="skills mt"
+                  />
                 ))}
               </Hidden>
               {projects.map((project) => (
@@ -98,7 +102,12 @@ function WorkExperience({
               ))}
               <Hidden smDown>
                 {skills.map((skill) => (
-                  <Chip label={skill} color="secondary" className="skills mt" />
+                  <Chip
+                    label={skill}
+                    color="primary"
+                    variant="outlined"
+                    className="skills mt"
+                  />
                 ))}
               </Hidden>
             </CardContent>
@@ -116,12 +125,16 @@ const StyledCard = styled(Card)`
 
   transition: background-color 0.3s ease;
   &:hover {
-    background-color: rgba(94, 234, 212, 0.2);
+    background-color: ${({ theme }) => theme.palette.info.light};
 
     .company-role {
-      color: #5eead4;
-      transition: color 0.3s ease;
+      color: ${({ theme }) => theme.palette.primary.main};
     }
+  }
+
+  .company-role {
+    color: ${({ theme }) => theme.palette.secondary.main};
+    transition: color 0.3s ease;
   }
 
   .clickable-wrapper {
@@ -144,14 +157,18 @@ const StyledCard = styled(Card)`
   .mt {
     margin-top: 0.5em;
   }
+
+  .summary {
+    color: ${({ theme }) => theme.palette.text.secondary};
+  }
 `;
 
 const Experience = () => {
   return (
     <Box>
-      <Container maxWidth="md">
+      <Container>
         <Box mt={4} mb={2}>
-          <Typography variant="h4">Experience</Typography>
+          <Typography variant="h2">Experience</Typography>
         </Box>
         <Grid container direction="column" spacing={2}>
           {config.experiences.map((experience) => (

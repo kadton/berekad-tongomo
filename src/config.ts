@@ -22,8 +22,8 @@ export const config = {
       start: "2022",
       end: "Present",
       summary:
-        "Streamlined data lookup by linking prospects to parent company groups using React, PHP, and GraphQL, significantly boosting the data team's efficiency in tracking client performance. ",
-      skills: ["ReactJS", "JavaScript", "TypeScript", "PHP", "GraphQL"],
+        "Contributing to various internal and external application enhancements, such as language version updates, improving technical logging, and refining our CRM and billing systems. Using full-stack skills to develop new/existing applications, while also using Linux and GIT effectively, and writing comprehensive unit/functional tests, all contributing to significant improvements across our tech infrastructure.",
+      skills: ["React", "JavaScript", "TypeScript", "PHP", "GraphQL"],
       projects: [],
     },
     {
@@ -33,7 +33,7 @@ export const config = {
       start: "2020",
       end: "2022",
       summary:
-        "Developed a JavaScript Google extension to simplify CSM widget identification for technical and non-technical users, leading to a 25% increase in debugging speed across the team. Prepared observability and monitoring solutions for Zapier API calls for our customer success team, enhancing error visibility and speeding up issue resolution, reducing client onboarding delays from 2+ weeks to a few hours. Improved technical documentation with user-friendly visuals and tools like Google Sites, resulting in a 70% reduction in support requests and streamlining onboarding and sales team workflows.",
+        "Developed a JavaScript Google extension to streamline widget identification and managed the integration and configuration of APIs and widgets for client onboarding. Implemented observability and monitoring solutions for Zapier API calls.",
       skills: [
         "JavaScript",
         "PHP",
@@ -46,7 +46,6 @@ export const config = {
       projects: [
         {
           name: "Widget Finder",
-          icon: "",
           link: "https://chrome.google.com/webstore/detail/widget-finder/aehpmlfdbpnbjnbkekfbffbnpepnglmh",
         },
       ],
