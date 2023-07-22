@@ -1,7 +1,14 @@
 import React from "react";
-import { Box, Container, Grid, Typography } from "@mui/material";
+import { Box, Container, Grid, Typography, styled } from "@mui/material";
 import { config } from "../config";
 import Social from "./Social";
+import Typewriter from "typewriter-effect";
+
+const TypewriterTypography = styled(Typography)`
+  & .Typewriter {
+    display: inline;
+  }
+`;
 
 const styles = {
   heroSection: {
@@ -10,7 +17,9 @@ const styles = {
     justifyContent: "center",
     width: "100%",
     color: "text.primary",
-    padding: "28px",
+    padding: "28px 0 28px 0",
+    height: "100%",
+    alignItems: "center",
   },
 };
 
@@ -20,17 +29,27 @@ const HeroSection = () => {
       <Container maxWidth="md">
         <Grid container direction="column">
           <Grid item>
-            <Typography component="h1" variant="h3">
+            <Typography component="h1" variant="h1" my={2}>
               {config.fullName}
             </Typography>
-            <Typography variant="h4">{config.currentRole}</Typography>
-            <Typography variant="h5">
-              Currently working at {config.currentCompany}
+            <Typography variant="h2" my={2}>
+              {config.currentRole}
             </Typography>
+            <TypewriterTypography variant="h3" my={2}>
+              Currently working at{" "}
+              <Typewriter
+                options={{
+                  strings: [config.currentCompany],
+                  autoStart: true,
+                  delay: 100,
+                  pauseFor: 60000,
+                  cursor: "|",
+                  loop: true,
+                }}
+              />
+            </TypewriterTypography>
           </Grid>
-          {/* <Grid item> */}
           <Social />
-          {/* </Grid> */}
         </Grid>
       </Container>
     </Box>
