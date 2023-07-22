@@ -3,6 +3,7 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import "../fonts.css";
 import App from "../components/App";
+import Seo from "../components/SEO";
 
 export const theme = createTheme({
   typography: {
@@ -60,3 +61,5 @@ const index = () => {
 };
 
 export default index;
+
+export const Head = () => <Seo />;
