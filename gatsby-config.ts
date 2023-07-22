@@ -14,6 +14,14 @@ const config: GatsbyConfig = {
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     "gatsby-plugin-styled-components",
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Berekad Tongomo`,
+        short_name: `BT`,
+        icon: `src/images/ber.png`,
+      },
+    },
   ],
 };
 
