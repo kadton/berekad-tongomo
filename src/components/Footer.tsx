@@ -16,15 +16,27 @@ const Footer = () => {
       <Box py={3} borderTop={1} borderColor="divider">
         <Typography variant="body2" color="text.secondary">
           Built with{" "}
-          <StyledLink href="" target="_blank" rel="noopener noreferrer">
+          <StyledLink
+            href="https://react.dev/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             React
           </StyledLink>
           ,{" "}
-          <StyledLink href="" target="_blank" rel="noopener noreferrer">
+          <StyledLink
+            href="https://www.gatsbyjs.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             GatsbyJS
           </StyledLink>
           , and{" "}
-          <StyledLink href="" target="_blank" rel="noopener noreferrer">
+          <StyledLink
+            href="https://mui.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Material-UI V5
           </StyledLink>
         </Typography>
