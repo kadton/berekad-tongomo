@@ -3,7 +3,7 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import "../fonts.css";
 import App from "../components/App";
-import Seo from "../components/SEO";
+import Seo from "../components/Seo";
 
 export const theme = createTheme({
   typography: {
