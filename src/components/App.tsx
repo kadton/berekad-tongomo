@@ -21,7 +21,7 @@ const App = () => {
         </Hidden>
         <Hidden mdDown>
           <Grid item md={6} style={sticky}>
-            <HeroSection />
+            <HeroSection paddingTop="0" />
           </Grid>
         </Hidden>
         <Grid item xs={12} md={6}>

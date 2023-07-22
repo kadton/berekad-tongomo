@@ -17,13 +17,18 @@ const styles = {
     justifyContent: "center",
     width: "100%",
     color: "text.primary",
-    padding: "28px 0 28px 0",
+    paddingTop: "",
     height: "100%",
     alignItems: "center",
   },
 };
 
-const HeroSection = () => {
+interface IHeroSection {
+  paddingTop?: string;
+}
+
+const HeroSection = ({ paddingTop = "38px" }: IHeroSection) => {
+  styles.heroSection.paddingTop = paddingTop;
   return (
     <Box sx={styles.heroSection}>
       <Container maxWidth="md">

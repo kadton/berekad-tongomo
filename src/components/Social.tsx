@@ -19,7 +19,7 @@ const StyledIconButton = styled(IconButton)`
 
 const Social = () => {
   return (
-    <Grid container my={2}>
+    <Grid container mt={2}>
       {socialItems.map((item) => (
         <Grid item key={item.url}>
           <Link href={item.url} rel="noopener" target="_blank">
