@@ -2,7 +2,6 @@ import React from "react";
 import { Box, Container, Grid, Typography, styled } from "@mui/material";
 import { config } from "../config";
 import Social from "./Social";
-import Typewriter from "typewriter-effect";
 
 const TypewriterTypography = styled(Typography)`
   & .Typewriter {
@@ -40,19 +39,9 @@ const HeroSection = ({ paddingTop = "38px" }: IHeroSection) => {
             <Typography variant="h2" my={2}>
               {config.currentRole}
             </Typography>
-            <TypewriterTypography variant="h3" my={2}>
-              Currently working at{" "}
-              <Typewriter
-                options={{
-                  strings: [config.currentCompany],
-                  autoStart: true,
-                  delay: 100,
-                  pauseFor: 60000,
-                  cursor: "|",
-                  loop: true,
-                }}
-              />
-            </TypewriterTypography>
+            <Typography variant="h3" my={2}>
+              Currently working at {config.currentCompany}
+            </Typography>
           </Grid>
           <Social />
         </Grid>
