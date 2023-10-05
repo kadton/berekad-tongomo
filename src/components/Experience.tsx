@@ -85,6 +85,11 @@ function WorkExperience({
               <Typography variant="body2" className="mb summary">
                 {summary}
               </Typography>
+              {projects.map((project) => (
+                <Box mt={1} mb={1}>
+                  <LinkTextIcon {...project} key={project.name} />
+                </Box>
+              ))}
               <Hidden smUp>
                 {skills.map((skill) => (
                   <Chip
@@ -95,11 +100,7 @@ function WorkExperience({
                   />
                 ))}
               </Hidden>
-              {projects.map((project) => (
-                <Box mt={1} mb={1}>
-                  <LinkTextIcon {...project} key={project.name} />
-                </Box>
-              ))}
+
               <Hidden smDown>
                 {skills.map((skill) => (
                   <Chip
